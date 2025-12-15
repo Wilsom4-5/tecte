@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Visualizador AR</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Biblioteca OFICIAL do model-viewer -->
+    <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+
     <style>
-        /* Tira as margens da página e deixa o 3D em tela cheia */
-        body { margin: 0; padding: 0; }
-        model-viewer { width: 100vw; height: 100vh; }
+      body {
+        margin: 0;
+        padding: 0;
+        background: #eaeaea;
+      }
+      model-viewer {
+        width: 100vw;
+        height: 100vh;
+      }
     </style>
-</head>
-<body>
+  </head>
 
-    <model-viewer 
-        src="/electrical_box-otimixad.glb" 
-        ar 
-        ar-modes="scene-viewer webxr quick-look" 
-        ar-scale="fixed"
-        camera-controls 
-        tone-mapping="neutral" 
-        shadow-intensity="0.94" 
-        exposure="1">
+  <body>
+    <model-viewer
+      src="electrical_box-otimizado.glb"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      exposure="1"
+    >
     </model-viewer>
-
-</body>
-
+  </body>
 </html>
-
-
-
